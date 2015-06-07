@@ -31,7 +31,7 @@ public class DrugList {
     void printAllDrugsAlphabetically(String character){     //wyswietlanie lekartsw alfabetycznie
 
             /*tutaj nalezy wyslac zapytanie do mysql ktore bd szukalo wszystkich rekordow
-            zaczynajacych sie na litere w zmiennej character*/
+            zaczynajacych sie na litere w zmiennej character, nale¿y tez zgrac to z klas*/
     }
     void printAllDrugs(){            //wyswietlanie wszystkich lekarstw
              /*tutaj nalezy wyslac zapytanie do mysql ktore bd szukalo wszystkich rekordow
@@ -41,17 +41,17 @@ public class DrugList {
     void addToDrugList(String name,String internationalName,String activityProduct,String indcication,String contra,String type){
             /*tutaj zapytanie do mysql INSERT*/
             /*mozna sie zastanowic nad przesylaniem parametrow do funkcji i wybrac inny sposob, np
-             mozna najpier za pomoca konstruktora utworzyc obiekt a pozniej wyslac ten obiekt do funkcji*/
+             mozna najpierw za pomoca konstruktora utworzyc obiekt a pozniej wyslac ten obiekt do funkcji*/
 
     }
     void removeDrugFromList(String name){
             /*tutaj zapytanie do mysql DELETE*/
     }
+
     public DrugList(int id_drug){                           //konstruktor uzupelnia wszystkie pola w zaleznosci od id
 
             /* tutaj bd trzeba bd pobrac dane z formularza i uzupelnic
-            te wszystkie pola oprocz daty ktora okresla uzytkownik
-             */
+            te wszystkie pola              */
 
     }
 

@@ -26,10 +26,10 @@ public class ApteczkaServlet extends javax.servlet.http.HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html><head>");
             out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-            out.println("<title>Hello, World</title></head>");
+            out.println("<title>Apteczka</title></head>");
             out.println("<body>");
             out.println("<form action=\"http://localhost:8081/dodawanie\"/>\n" +
-                    "  <input type=\"submit\" value=\"Dodaj lek\"/></form><br>\n" +
+                    "  <input type=\"submit\" value=\"Dodaj lek\"/><br></form>\n" +
                     "<form action=\"http://localhost:8081/usuwanie\"/>\n" +
                     "  <input type=\"submit\" value=\"Usuñ lek\"/><br></form>\n"  +
                     "<form action=\"http://localhost:8081/wyswietl\"/>\n"+
