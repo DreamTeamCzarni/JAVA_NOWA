@@ -9,14 +9,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class DrugList {
-
-    static String url = "mysql.agh.edu.pl";
-    static String baza = "anowak";
-    //static String login = "root";
-    static String password = "gg83Vbdg";
 
     static int id_Drug;
     static String DrugName;
@@ -26,26 +24,93 @@ public class DrugList {
     static String DrugContraidications;                //tutaj tez
     static String DrugType;                            //i tu rowniez
 
-    static List<DrugList> allDrugList = new ArrayList<DrugList>();
+    //static List<DrugList> allDrugList = new ArrayList<DrugList>();
 
-    void printAllDrugsAlphabetically(String character){     //wyswietlanie lekartsw alfabetycznie
+    public static void printAllDrugs(){            //wyswietlanie wszystkich lekarstw
+        try
+        {
+            MysqlDataSource dataSource = new MysqlDataSource();
+            dataSource.setUser("anowak");
+            dataSource.setPassword("gg83Vbdg");
+            dataSource.setServerName("mysql.agh.edu.pl");
+            dataSource.setDatabaseName("anowak");
+            dataSource.setPort(3306);
+            Connection conn = dataSource.getConnection();
+            Statement stmt = conn.createStatement();
+            // tutaj Pawe³ zaczyna siê ta funkcja do tego wyœwietlania alfabetycznie
+            ResultSet rs = stmt.executeQuery("SELECT * FROM  `Apteczka` ORDER BY  `Apteczka`.`nazwa handlowa leku` ASC");
+            int columnCount = rs.getMetaData().getColumnCount();
 
-            /*tutaj nalezy wyslac zapytanie do mysql ktore bd szukalo wszystkich rekordow
-            zaczynajacych sie na litere w zmiennej character, nale¿y tez zgrac to z klas*/
+            for(int i=1;i<=columnCount;i++)
+            {
+                System.out.print(rs.getMetaData().getColumnName(i));
+                System.out.print("\t");
+            }
+
+            while(rs.next())
+            {
+                for(int i=1;i<=columnCount;i++)
+                {
+                    System.out.print(rs.getObject(i));
+                    System.out.print("\t");
+                }
+                System.out.println();
+            }
+
+            rs.close();
+            stmt.close();
+            conn.close();
+        }
+        catch(Exception ex)
+        {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        }
+
     }
-    void printAllDrugs(){            //wyswietlanie wszystkich lekarstw
-             /*tutaj nalezy wyslac zapytanie do mysql ktore bd szukalo wszystkich rekordow
-            a nastepnie je wyœwieli*/
+    public static void addToDrugList(String name,String internationalName,String activityProduct,String indcication,String contra,String type){
+        try {
+
+            MysqlDataSource dataSource = new MysqlDataSource();
+            dataSource.setUser("anowak");
+            dataSource.setPassword("gg83Vbdg");
+            dataSource.setServerName("mysql.agh.edu.pl");
+            dataSource.setDatabaseName("anowak");
+            dataSource.setPort(3306);
+            Connection conn = dataSource.getConnection();
+            Statement stmt = conn.createStatement();
+
+            int row = stmt.executeUpdate("INSERT INTO `Apteczka`("+
+                    "`nazwa handlowa leku`,"+
+                    " `nazwa miêdzynarodowa`,"+
+                    " `nazwa substancji czynnej`,"+
+                    " `wskazania`,"+
+                    " `rodzaj`, "+
+                    " `przeciwwskazania`) "+
+                    "VALUES('"+name+"','"+internationalName+"','"+activityProduct+"','"+indcication+"','"+type+"','"+contra+"')");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        }
 
     }
-    void addToDrugList(String name,String internationalName,String activityProduct,String indcication,String contra,String type){
-            /*tutaj zapytanie do mysql INSERT*/
-            /*mozna sie zastanowic nad przesylaniem parametrow do funkcji i wybrac inny sposob, np
-             mozna najpierw za pomoca konstruktora utworzyc obiekt a pozniej wyslac ten obiekt do funkcji*/
+    public static void removeDrugFromList(String name) {
+        try {
 
-    }
-    void removeDrugFromList(String name){
-            /*tutaj zapytanie do mysql DELETE*/
+            MysqlDataSource dataSource = new MysqlDataSource();
+            dataSource.setUser("anowak");
+            dataSource.setPassword("gg83Vbdg");
+            dataSource.setServerName("mysql.agh.edu.pl");
+            dataSource.setDatabaseName("anowak");
+            dataSource.setPort(3306);
+            Connection conn = dataSource.getConnection();
+            Statement stmt = conn.createStatement();
+
+            int row = stmt.executeUpdate("DELETE FROM  `Apteczka` WHERE `Apteczka`.`nazwa handlowa leku`='"+name+"'  ");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        }
     }
 
     public DrugList(int id_drug){                           //konstruktor uzupelnia wszystkie pola w zaleznosci od id

@@ -7,9 +7,9 @@ import java.util.List;
  * Created by Pawel on 2015-06-05.
  */
 public class Kind {
-    static List<String> allKind = new ArrayList<String>();
+    public static  List<String> allKind = new ArrayList<String>();
 
-    public void fillList(){
+    public static void fillList(){
         allKind.add("maœæ, krem");
         allKind.add("tabletki");
         allKind.add("proszek do sporz¹dzenia roztworu");

@@ -8,9 +8,9 @@ import java.util.List;
  */
 public class Contraidication {
 
-    static List<String> allContraidication = new ArrayList<String>();
+    public static List<String> allContraidication = new ArrayList<String>();
 
-    public void fillList() {
+    public static void fillList() {
         allContraidication.add("uczulenie na sk³adniki");
         allContraidication.add("ci¹za");
         allContraidication.add("brak");

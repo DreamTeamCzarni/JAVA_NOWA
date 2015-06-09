@@ -32,10 +32,8 @@ public class ApteczkaServlet extends javax.servlet.http.HttpServlet {
                     "  <input type=\"submit\" value=\"Dodaj lek\"/><br></form>\n" +
                     "<form action=\"http://localhost:8081/usuwanie\"/>\n" +
                     "  <input type=\"submit\" value=\"Usuñ lek\"/><br></form>\n"  +
-                    "<form action=\"http://localhost:8081/wyswietl\"/>\n"+
-                    "  <input type=\"submit\" value=\"Wyœwietl wszystkie leki\" /><br></form>\n" +
                     "<form action=\"http://localhost:8081/wyswietlalfabetycznie\"/>\n"+
-                    "  <input type=\"submit\" value=\"Wyswietl leki alfabetycznie\"<br>\n" +
+                    "  <input type=\"submit\" value=\"Wyswietl wszystkie leki alfabetycznie\"<br>\n" +
                     "</form>");
 
             out.println("</body>");
@@ -45,3 +43,4 @@ public class ApteczkaServlet extends javax.servlet.http.HttpServlet {
         }
     }
 }
+

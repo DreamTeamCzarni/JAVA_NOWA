@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by Pawel on 2015-06-05.
+ * Created by Pawel on 2015-06-09.
  */
-public class WyswietlanieServlet extends HttpServlet {
+public class Usuwanie2Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

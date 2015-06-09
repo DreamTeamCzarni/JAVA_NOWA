@@ -15,14 +15,16 @@
         <servlet-name>UsuwanieServlet</servlet-name>
         <servlet-class>ApteczkaServlet.UsuwanieServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>WyswietlanieServlet</servlet-name>
-        <servlet-class>ApteczkaServlet.WyswietlanieServlet</servlet-class>
-    </servlet>
+
     <servlet>
         <servlet-name>WyswietlAlfabetycznieServlet</servlet-name>
         <servlet-class>ApteczkaServlet.WyswietlAlfabetycznieServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Usuwanie2Servlet</servlet-name>
+        <servlet-class>ApteczkaServlet.Usuwanie2Servlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>ApteczkaServlet</servlet-name>
         <url-pattern>/start</url-pattern>
@@ -35,12 +37,14 @@
         <servlet-name>UsuwanieServlet</servlet-name>
         <url-pattern>/usuwanie</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>WyswietlanieServlet</servlet-name>
-        <url-pattern>/wyswietlanie</url-pattern>
-    </servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>WyswietlAlfabetycznieServlet</servlet-name>
         <url-pattern>/wyswietlalfabetycznie</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Usuwanie2Servlet</servlet-name>
+        <url-pattern>/usuwanie2</url-pattern>
+    </servlet-mapping>
+
 </web-app>

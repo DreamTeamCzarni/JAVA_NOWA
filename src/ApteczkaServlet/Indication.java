@@ -7,9 +7,9 @@ import java.util.List;
  * Created by Pawel on 2015-06-05.
  */
 public class Indication {
-    static List<String> allIndication = new ArrayList<String>();
+    public static List<String> allIndication = new ArrayList<String>();
 
-    public void fillList() {
+    public static void fillList() {
         allIndication.add("podra¿nienia skóry");
         allIndication.add("zaka¿enia skóry");
         allIndication.add("zaka¿enia ran");
