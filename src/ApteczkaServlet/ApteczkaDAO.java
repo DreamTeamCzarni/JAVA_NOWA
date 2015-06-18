@@ -52,7 +52,7 @@ public class ApteczkaDAO {
 
             Statement stmt = connection.createStatement();
             // tutaj Pawe³ zaczyna siê ta funkcja do tego wyœwietlania alfabetycznie
-            ResultSet rs = stmt.executeQuery("SELECT * FROM  `Apteczka` ");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM  `Apteczka`");
 
             while(rs.next()){
 

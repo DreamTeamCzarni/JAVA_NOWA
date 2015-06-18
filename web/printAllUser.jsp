@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <html>
 <head>
@@ -32,16 +32,16 @@
   </thred>
 
   <tbody>
-  <c:forEach items="${drugs}" var="apteczka">
+  <c:forEach items="${drugs}" var="Apteczka" >
     <tr>
-      <td><c:out value="${apteczka.Apteczka.id_leku}"/><br></td>
-      <td><c:out value="${apteczka.nazwa_handlowa_leku}"/><br></td>
-      <td><c:out value="${apteczka.nazwa_miedzynarodowa}"/><br></td>
-      <td><c:out value="${apteczka.nazwa_substancji_czynnej}"/><br></td>
-      <td><c:out value="${apteczka.wskazania}"/><br></td>
-      <td><c:out value="${apteczka.rodzaj}"/><br></td>
-      <td><c:out value="${apteczka.przeciwwskazania}"/></td>
-      <td><a href="kontroler?action=delete&nazwa_handlowa_leku=<c:out value="${apteczka.nazwa_handlowa_leku}"/> ">Usuń</a> </td>
+      <td><c:out value="${Apteczka.id_leku}"/><br></td>
+      <td><c:out value="${Apteczka.nazwa_handlowa_leku}"/><br></td>
+      <td><c:out value="${Apteczka.nazwa_miedzynarodowa}"/><br></td>
+      <td><c:out value="${Apteczka.nazwa_substancji_czynnej}"/><br></td>
+      <td><c:out value="${Apteczka.wskazania}"/><br></td>
+      <td><c:out value="${Apteczka.rodzaj}"/><br></td>
+      <td><c:out value="${Apteczka.przeciwwskazania}"/></td>
+      <td><a href="kontroler?action=delete&nazwa_handlowa_leku=<c:out value="${Apteczka.nazwa_handlowa_leku}"/> ">Usuń</a> </td>
     </tr>
   </c:forEach>
   </tbody>
@@ -53,9 +53,7 @@
   <center><input type="submit" value="Dodaj lek" class="pill button" style="width: 230px" /></center><br>
     </form>
 
-    <form action="deleteDrug.jsp" method="GET"/>
-      <center><input type="submit" value="Usuń lek" style="width: 230px"/></center><br>
-</form>
+
 
         <body>
         <hr />
