@@ -1,0 +1,110 @@
+H2 {font-size: 23pt; color: red; font-family: "Andale Mono"; text-decoration: none, text-align: justify; margin-bottom: 2px; font-weight: bold; }
+H3 {font-size: 16pt; color: red; font-family: "Andale Mono", Verdana, "Arial CE", Arial, Helvetica, sans-serif; text-decoration: none, text-align: justify; margin-top: 1px; margin-left: 5px; font-weight: bold;}
+
+P {font-size: 15pt; color: black; font-family: "Verdana CE", Verdana, "Arial CE", Arial, Helvetica, sans-serif; text-decoration: none, text-align: justify; margin-bottom: 2px; font-weight: normal; }
+
+H5 {font-size: 10pt; color: #CC6666; font-family: "Bradley Hand", Verdana, "Arial CE", Arial, Helvetica, sans-serif; text-decoration: none, text-align: justify; margin-bottom: 2px; font-weight: bold;}
+
+H1 {font-size: 20pt; color: red; font-family: "Andale Mono", Verdana, "Arial CE", Arial, Helvetica, sans-serif; text-decoration: none, text-align: justify; margin-top: 1px; margin-left: 5px; font-weight: bold;}
+
+T3 {font-size: 13pt; color: #000066; font-family: "Andale Mono", Verdana, "Arial CE", Arial, Helvetica, sans-serif; text-decoration: none, text-align: justify; font-weight: bold;}
+
+table {
+    border: none;
+    background:#EFF4FB url(http://www.roscripts.com/images/teaser.gif) repeat-x;
+    border-left:1px solid #686868;
+    border-right:1px solid #686868;
+    border-radius: 10px;
+    font:0.8em/145% "Andale Mono", Verdana, "Arial CE", Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+td, th {
+    padding:5px;
+}
+
+caption {
+    padding: 0 0 .5em 0;
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    background: transparent;
+}
+
+/* =links
+----------------------------------------------- */
+
+table a {
+    color:#950000;
+    text-decoration:none;
+}
+
+table a:link {}
+
+table a:visited {
+    font-weight:normal;
+    color:#666;
+    text-decoration: line-through;
+}
+
+table a:hover {
+    border-bottom: 1px dashed #bbb;
+}
+
+/* =head =foot
+----------------------------------------------- */
+
+thead th, tfoot th, tfoot td {
+    background:#333 url(http://www.roscripts.com/images/llsh.gif) repeat-x;
+    color:#fff
+}
+
+tfoot td {
+    text-align:right
+}
+
+/* =body
+----------------------------------------------- */
+
+tbody th, tbody td {
+    border-bottom: dotted 1px #333;
+}
+
+tbody th {
+    white-space: nowrap;
+}
+
+tbody th a {
+    color:#333;
+}
+
+.odd {}
+
+tbody tr:hover {
+    background:#fafafa
+}
+
+input {
+    border: none;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #EFF4FB;
+    color: #333;
+    font: bold 0.8em/145% "Andale Mono", Verdana, "Arial CE", Arial, Helvetica, sans-serif;
+    margin: 0 10px 0 0;
+    padding: 10px 10px 10px 10px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+textarea {
+    border: none;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}

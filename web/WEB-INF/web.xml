@@ -3,48 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <servlet>
-        <servlet-name>ApteczkaServlet</servlet-name>
-        <servlet-class>ApteczkaServlet.ApteczkaServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DodawanieServlet</servlet-name>
-        <servlet-class>ApteczkaServlet.DodawanieServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>UsuwanieServlet</servlet-name>
-        <servlet-class>ApteczkaServlet.UsuwanieServlet</servlet-class>
-    </servlet>
 
     <servlet>
-        <servlet-name>WyswietlAlfabetycznieServlet</servlet-name>
-        <servlet-class>ApteczkaServlet.WyswietlAlfabetycznieServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>Usuwanie2Servlet</servlet-name>
-        <servlet-class>ApteczkaServlet.Usuwanie2Servlet</servlet-class>
+        <servlet-name>ApteczkaKontrolerServlet</servlet-name>
+        <servlet-class>ApteczkaServlet.ApteczkaKontrolerServlet</servlet-class>
     </servlet>
 
-    <servlet-mapping>
-        <servlet-name>ApteczkaServlet</servlet-name>
-        <url-pattern>/start</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DodawanieServlet</servlet-name>
-        <url-pattern>/dodawanie</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UsuwanieServlet</servlet-name>
-        <url-pattern>/usuwanie</url-pattern>
-    </servlet-mapping>
+
+
 
     <servlet-mapping>
-        <servlet-name>WyswietlAlfabetycznieServlet</servlet-name>
-        <url-pattern>/wyswietlalfabetycznie</url-pattern>
+        <servlet-name>ApteczkaKontrolerServlet</servlet-name>
+        <url-pattern>/kontroler</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Usuwanie2Servlet</servlet-name>
-        <url-pattern>/usuwanie2</url-pattern>
-    </servlet-mapping>
-
 </web-app>
